@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | TravelBloom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">✈ TravelBloom</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a class="active" href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+  <main class="inner-page">
+    <div class="overlay"></div>
+    <section class="contact-layout">
+      <div>
+        <p class="eyebrow">We would love to hear from you</p>
+        <h1>CONTACT US</h1>
+        <p class="large-copy">Have a question or a destination in mind? Send us a message.</p>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <label for="name">Name</label>
+        <input id="name" name="name" required placeholder="Your name">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Tell us how we can help"></textarea>
+        <button class="cta" type="submit">SUBMIT</button>
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("formMessage").textContent = "Thanks! Your message has been received.";
+      this.reset();
+    });
+  </script>
+</body>
+</html>

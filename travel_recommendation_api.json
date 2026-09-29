@@ -1,0 +1,76 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "name": "Australia",
+      "cities": [
+        {
+          "name": "Sydney, Australia",
+          "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=900&q=80",
+          "description": "A vibrant harbour city famous for the Opera House, beaches, and cosmopolitan culture."
+        },
+        {
+          "name": "Melbourne, Australia",
+          "imageUrl": "https://images.unsplash.com/photo-1514395462725-fb4566210144?auto=format&fit=crop&w=900&q=80",
+          "description": "A creative city celebrated for laneways, cafés, arts, sport, and multicultural neighborhoods."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Japan",
+      "cities": [
+        {
+          "name": "Tokyo, Japan",
+          "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=900&q=80",
+          "description": "A dynamic metropolis where futuristic city life meets centuries of Japanese tradition."
+        },
+        {
+          "name": "Kyoto, Japan",
+          "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80",
+          "description": "Discover historic streets, gardens, shrines, temples, and traditional Japanese culture."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Brazil",
+      "cities": [
+        {
+          "name": "Rio de Janeiro, Brazil",
+          "imageUrl": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=900&q=80",
+          "description": "A spectacular coastal city known for mountains, beaches, music, and energetic culture."
+        },
+        {
+          "name": "São Paulo, Brazil",
+          "imageUrl": "https://images.unsplash.com/photo-1543059080-f9b1272213d5?auto=format&fit=crop&w=900&q=80",
+          "description": "Brazil's diverse cultural hub with renowned food, art, architecture, and nightlife."
+        }
+      ]
+    }
+  ],
+  "temples": [
+    {
+      "name": "Angkor Wat, Cambodia",
+      "imageUrl": "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=900&q=80",
+      "description": "Explore one of the world's most remarkable temple complexes and the legacy of the Khmer Empire."
+    },
+    {
+      "name": "Wat Arun, Thailand",
+      "imageUrl": "https://images.unsplash.com/photo-1562602833-0f4ab2fc46e3?auto=format&fit=crop&w=900&q=80",
+      "description": "Bangkok's iconic riverside Temple of Dawn is known for its striking spires and intricate details."
+    }
+  ],
+  "beaches": [
+    {
+      "name": "Bora Bora, French Polynesia",
+      "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
+      "description": "Relax beside turquoise water, soft sand, and dramatic tropical scenery."
+    },
+    {
+      "name": "Railay Beach, Thailand",
+      "imageUrl": "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&w=900&q=80",
+      "description": "A beautiful Thai peninsula known for limestone cliffs, clear water, and laid-back island atmosphere."
+    }
+  ]
+}

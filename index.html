@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TravelBloom - discover beaches, temples, countries, and cultural destinations around the world.">
+  <title>TravelBloom | Explore Dream Destinations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">✈ TravelBloom</a>
+    <nav aria-label="Main navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <div class="search-box">
+      <input id="searchInput" type="search" placeholder="Enter a destination or keyword" aria-label="Search destinations">
+      <button id="searchBtn" type="button">Search</button>
+      <button id="clearBtn" class="secondary" type="button">Clear</button>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="overlay"></div>
+    <aside class="socials" aria-label="Social media">
+      <span class="line"></span>
+      <a href="#" aria-label="Twitter">𝕏</a>
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Instagram">◎</a>
+      <a href="#" aria-label="YouTube">▶</a>
+    </aside>
+
+    <section class="hero-copy">
+      <p class="eyebrow">Discover the world</p>
+      <h1>EXPLORE<br>DREAM<br>DESTINATION</h1>
+      <p class="intro">Travel opens the door to new cultures, unforgettable landscapes, and stories worth carrying home. Search for a country, beach, or temple and find your next adventure.</p>
+      <a class="cta" href="#recommendations">BOOK NOW</a>
+    </section>
+
+    <section id="recommendations" class="results-panel" aria-live="polite">
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
