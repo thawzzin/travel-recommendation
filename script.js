@@ -15,7 +15,8 @@ fetch("./travel_recommendation_api.json")
   })
   .catch((error) => {
     console.error(error);
-    results.innerHTML = '<p class="status error">Recommendation data could not be loaded. Run the project through a local server.</p>';
+    results.innerHTML =
+      '<p class="status error">Recommendation data could not be loaded. Run the project through a local server.</p>';
   });
 
 function normalize(value) {
@@ -26,32 +27,42 @@ function getRecommendations(query) {
   if (!travelData) return [];
   const q = normalize(query);
 
-  if (["beach", "beaches"].includes(q) || q.includes("beach")) return travelData.beaches;
-  if (["temple", "temples"].includes(q) || q.includes("temple")) return travelData.temples;
+  if (["beach", "beaches"].includes(q) || q.includes("beach"))
+    return travelData.beaches;
+  if (["temple", "temples"].includes(q) || q.includes("temple"))
+    return travelData.temples;
+  if (["country", "countries"].includes(q) || q.includes("country"))
+    return travelData.countries.map((country) => country.cities[0]);
 
-  const country = travelData.countries.find((item) =>
-    normalize(item.name).includes(q) || q.includes(normalize(item.name))
+  const country = travelData.countries.find(
+    (item) =>
+      normalize(item.name).includes(q) || q.includes(normalize(item.name)),
   );
   if (country) return country.cities;
 
   const allPlaces = [
     ...travelData.beaches,
     ...travelData.temples,
-    ...travelData.countries.flatMap((countryItem) => countryItem.cities)
+    ...travelData.countries.flatMap((countryItem) => countryItem.cities),
   ];
 
-  return allPlaces.filter((place) =>
-    normalize(place.name).includes(q) || normalize(place.description).includes(q)
+  return allPlaces.filter(
+    (place) =>
+      normalize(place.name).includes(q) ||
+      normalize(place.description).includes(q),
   );
 }
 
 function displayRecommendations(items) {
   if (!items.length) {
-    results.innerHTML = '<p class="status">No recommendations found. Try “Japan”, “Australia”, “beach”, or “temple”.</p>';
+    results.innerHTML =
+      '<p class="status">No recommendations found. Try “Japan”, “Australia”, “beach”, or “temple”.</p>';
     return;
   }
 
-  results.innerHTML = items.map((place) => `
+  results.innerHTML = items
+    .map(
+      (place) => `
     <article class="recommendation-card">
       <img src="${place.imageUrl}" alt="${place.name}" loading="lazy">
       <div class="card-body">
@@ -60,13 +71,16 @@ function displayRecommendations(items) {
         <button type="button" class="visit-btn">Visit</button>
       </div>
     </article>
-  `).join("");
+  `,
+    )
+    .join("");
 }
 
 function search() {
   const query = input.value.trim();
   if (!query) {
-    results.innerHTML = '<p class="status">Enter a destination or keyword to start exploring.</p>';
+    results.innerHTML =
+      '<p class="status">Enter a destination or keyword to start exploring.</p>';
     return;
   }
   if (!travelData) {
